@@ -1,0 +1,45 @@
+:root {
+  --yellow: #fec403;
+  --yellow-deep: #dca900;
+  --ink: #000;
+  --white: #fff;
+  --canvas: #fff9e6;
+  --surface: #fff1bf;
+  --surface-strong: #ffe281;
+  --grey-100: #ececea;
+  --grey-200: #d6d6d3;
+  --grey-300: #bdbdba;
+  --info: #0072b2;
+  --positive: #009e73;
+  --danger: #a52a2a;
+
+  --font-sans: "Overpass", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Nunito", "Overpass", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --step--1: clamp(.78rem, .74rem + .18vw, .88rem);
+  --step-0: clamp(1rem, .95rem + .22vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.12rem + .55vw, 1.6rem);
+  --step-2: clamp(1.65rem, 1.35rem + 1.15vw, 2.4rem);
+  --step-3: clamp(2.2rem, 1.72rem + 2vw, 3.5rem);
+  --step-4: clamp(3.15rem, 2.3rem + 3.8vw, 6rem);
+  --step-5: clamp(4.2rem, 2.7rem + 6.5vw, 9rem);
+
+  --space-1: .375rem;
+  --space-2: .75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: clamp(4rem, 8vw, 8rem);
+  --space-8: clamp(5rem, 11vw, 11rem);
+
+  --gutter: clamp(1rem, 3vw, 3rem);
+  --wide: 90rem;
+  --content: 76rem;
+  --narrow: 48rem;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --border: 2px;
+  --fast: 150ms;
+  --standard: 280ms;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
