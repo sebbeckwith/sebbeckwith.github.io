@@ -22,8 +22,8 @@ export function Problem() {
   const problems = [
     {
       number: '01',
-      title: <>Closed questions can<br />limit what people tell you.</>,
-      text: <>Tick boxes and rating scales work for known measures, but they can constrain answers when discovery matters.</>,
+      title: <>Closed questions<br />limit truth.</>,
+      text: <>Tick boxes and rating scales force people into answers that may not reflect how they really feel.</>,
       visual: (
         <div className="problem-card__survey">
           <strong>How satisfied are you?</strong>
@@ -35,8 +35,8 @@ export function Problem() {
     },
     {
       number: '02',
-      title: <>Open comments are<br />easy to overlook.</>,
-      text: <>Thoughtful feedback can become buried in exports and spreadsheets, separated from the rest of the survey.</>,
+      title: <>Open comments<br />get ignored.</>,
+      text: <>People leave thoughtful feedback, but it gets buried in spreadsheets no one has time to read.</>,
       visual: (
         <div className="problem-card__comments" aria-hidden="true">
           <blockquote>“Communication could<br />be clearer ...”<i /></blockquote>
@@ -47,8 +47,8 @@ export function Problem() {
     },
     {
       number: '03',
-      title: <>Numbers show what happened.<br />Not always why.</>,
-      text: <>Scores are useful measures. Open explanations add the context needed to interpret what may be driving them.</>,
+      title: <>Data without context<br />leads nowhere.</>,
+      text: <>Numbers alone cannot tell you why something is happening or what to do about it.</>,
       visual: (
         <div className="problem-card__data" aria-hidden="true">
           <div className="problem-chart">
@@ -68,6 +68,29 @@ export function Problem() {
             <path d="M4 5C18 49 58 55 94 19" markerEnd="url(#problem-arrowhead)" />
           </svg>
           <blockquote>“We know the score,<br />not the story.”</blockquote>
+        </div>
+      ),
+    },
+    {
+      number: '04',
+      title: <>One-way surveys<br />don’t build trust.</>,
+      text: <>People share their views, but there is no visibility, no dialogue and no sign that anything changes.</>,
+      visual: (
+        <div className="problem-card__trust" aria-hidden="true">
+          <div className="problem-card__bubbles">
+            <blockquote>“We shared<br />our views.”</blockquote>
+            <blockquote>“What changed?”</blockquote>
+          </div>
+          <div className="problem-card__people">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="23" r="10" />
+              <path d="M20 67c1-17 8-26 20-26s19 9 20 26M29 47c3 5 6 8 11 8s8-3 11-8" />
+            </svg>
+            <span>→</span>
+            <svg viewBox="0 0 80 80">
+              <path d="M17 68h46M23 68V19h34v49M31 29h5M44 29h5M31 39h5M44 39h5M31 49h5M44 49h5M37 68V57h6v11" />
+            </svg>
+          </div>
         </div>
       ),
     },

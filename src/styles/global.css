@@ -151,11 +151,12 @@ section { position: relative; }
 .problem__heading h2 { max-width: 18ch; margin: 0; font-size: var(--step-4); }
 .problem__heading h2 span { padding-inline: .04em; background: linear-gradient(transparent 68%, var(--yellow) 68%); }
 .problem__heading > p { max-width: 35rem; margin: 0; padding-left: var(--space-5); border-left: .4rem solid var(--yellow); font-size: var(--step-1); line-height: 1.45; }
-.problem__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid rgb(0 0 0 / 14%); border-radius: var(--radius-sm); }
-.problem-card { display: flex; flex-direction: column; min-width: 0; min-height: 20rem; padding: clamp(1.35rem, 2vw, 2.25rem); border-right: 1px solid rgb(0 0 0 / 14%); }
+.problem__cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: hidden; border: 1px solid rgb(0 0 0 / 14%); border-radius: var(--radius-sm); background: rgb(255 255 255 / 18%); }
+.problem-card { display: flex; flex-direction: column; min-width: 0; min-height: 22rem; padding: clamp(1.25rem, 1.7vw, 1.85rem); border-right: 1px solid rgb(0 0 0 / 14%); }
+.problem-card:nth-child(even) { background: rgb(255 255 255 / 24%); }
 .problem-card:last-child { border-right: 0; }
 .problem-card__number { display: grid; place-items: center; width: 2.6rem; aspect-ratio: 1; margin-bottom: 1.3rem; border-radius: 50%; background: var(--yellow); font-size: var(--step--1); font-weight: 900; }
-.problem-card h3 { margin-bottom: .85rem; font-size: clamp(1.35rem, 1.65vw, 1.85rem); line-height: 1.02; letter-spacing: -.045em; }
+.problem-card h3 { min-height: 2.1em; margin-bottom: .85rem; font-size: clamp(1.25rem, 1.45vw, 1.65rem); line-height: 1.05; letter-spacing: -.04em; }
 .problem-card > p { max-width: 24rem; margin-bottom: 1.5rem; line-height: 1.4; }
 .problem-card__visual { display: flex; flex: 1; align-items: end; min-height: 10rem; }
 .problem-card__survey { width: 100%; padding: 1.25rem 1.35rem; border: 1.5px solid var(--ink); border-radius: var(--radius-sm); background: rgb(255 255 255 / 42%); }
@@ -180,17 +181,18 @@ section { position: relative; }
 .problem-chart > i { position: absolute; bottom: 1.75rem; left: 1.25rem; width: 45%; }
 .problem-chart > i:nth-last-child(2) { bottom: 1.15rem; width: 36%; }
 .problem-chart > i:last-child { bottom: .55rem; width: 28%; }
-.problem-card__curve { position: absolute; left: 1.4rem; bottom: -.15rem; width: calc(100% - 11.25rem); height: 4rem; overflow: visible; fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transform: rotate(3deg); transform-origin: left center; }
+.problem-card__curve { position: absolute; left: .65rem; bottom: -.15rem; width: 44%; height: 4rem; overflow: visible; fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transform: rotate(3deg); transform-origin: left center; }
 .problem-card__curve marker path { fill: var(--ink); stroke: none; }
-.problem-card__data blockquote { position: absolute; right: 2.5rem; bottom: 0; margin: 0; padding: .8rem 1rem; border: 1px solid #dab019; border-radius: var(--radius-sm); background: #fff7d8; font-size: var(--step--1); font-style: italic; line-height: 1.3; }
+.problem-card__data blockquote { position: absolute; right: 0; bottom: 0; max-width: 9rem; margin: 0; padding: .75rem .85rem; border: 1px solid #dab019; border-radius: var(--radius-sm); background: #fff7d8; font-size: var(--step--1); font-style: italic; line-height: 1.25; }
 .problem-card__trust { width: 100%; }
-.problem-card__bubbles { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1.35rem; }
+.problem-card__bubbles { display: flex; justify-content: space-between; gap: .55rem; margin-bottom: 1.35rem; }
 .problem-card__bubbles blockquote { position: relative; margin: 0; padding: .8rem .9rem; border: 1px solid var(--ink); border-radius: var(--radius-sm); background: rgb(255 255 255 / 38%); font-size: var(--step--1); font-style: italic; line-height: 1.25; }
 .problem-card__bubbles blockquote:last-child { border-color: #dab019; background: #fff7d8; }
 .problem-card__bubbles blockquote::after { content: ""; position: absolute; left: 50%; bottom: -.45rem; width: .75rem; height: .75rem; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; background: inherit; transform: translateX(-50%) rotate(45deg); }
-.problem-card__people { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; padding-inline: .5rem; }
-.problem-card__people svg { width: 5.25rem; overflow: visible; fill: none; stroke: var(--ink); stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; }
-.problem-card__people span { font-size: 2.7rem; line-height: 1; }
+.problem-card__people { display: grid; grid-template-columns: 1fr auto 1fr; gap: .55rem; align-items: center; padding-inline: .25rem; }
+.problem-card__people svg { box-sizing: border-box; width: min(4.75rem, 100%); aspect-ratio: 1; padding: .45rem; overflow: visible; border: 1px solid var(--ink); border-radius: 50%; background: var(--white); fill: none; stroke: var(--ink); stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; }
+.problem-card__people svg:last-child { background: var(--surface-strong); }
+.problem-card__people span { font-size: 2rem; line-height: 1; }
 
 .analysis { padding: var(--space-8) 0; border-block: var(--border) solid var(--ink); background: var(--white); }
 .analysis__heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--space-7); align-items: end; margin-bottom: var(--space-6); }
@@ -546,9 +548,9 @@ section { position: relative; }
   .client-carousel { border-top: var(--border) solid var(--ink); }
   .problem__heading { grid-template-columns: 1fr; gap: var(--space-5); }
   .problem__heading > p { max-width: 44rem; }
-  .problem__cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .problem-card:nth-child(2) { border-right: 1px solid rgb(0 0 0 / 14%); }
-  .problem-card:nth-child(-n + 2) { border-bottom: 0; }
+  .problem__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .problem-card:nth-child(2) { border-right: 0; }
+  .problem-card:nth-child(-n + 2) { border-bottom: 1px solid rgb(0 0 0 / 14%); }
   .sector-solutions__carousel { grid-template-columns: 3.5rem minmax(0, 1fr) 3.5rem; gap: .5rem; }
   .sector-solutions__stage { height: 32rem; }
   .sector-card { width: 42%; min-height: 25rem; }
