@@ -79,7 +79,7 @@ export function Problem() {
         <div className="problem-card__trust" aria-hidden="true">
           <div className="problem-card__bubbles">
             <blockquote>“We shared<br />our views.”</blockquote>
-            <blockquote>“What changed?”</blockquote>
+            <div className="problem-card__silence"><span>No response</span><strong>Nothing changes.</strong></div>
           </div>
           <div className="problem-card__people">
             <svg viewBox="0 0 80 80">
@@ -88,7 +88,7 @@ export function Problem() {
             </svg>
             <span>→</span>
             <svg viewBox="0 0 80 80">
-              <path d="M17 68h46M23 68V19h34v49M31 29h5M44 29h5M31 39h5M44 39h5M31 49h5M44 49h5M37 68V57h6v11" />
+              <path d="M14 64h52V22H14v42ZM14 36h52M14 50h52M27 22v14M51 22v14M39 36v14M27 50v14M51 50v14" />
             </svg>
           </div>
         </div>
